@@ -29,7 +29,7 @@ const reducer = async (state, action) => {
             return {
                 ...state,
                 contacts: state.contacts.map(contact => {
-                    return contact.id === id ? (contact = res.data) : contact
+                    return (contact.id + "") === (id + "") ? (contact = res.data) : contact
                 })
             }
         }
